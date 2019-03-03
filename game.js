@@ -3,18 +3,21 @@ $(document).ready(function(){
     let targetCeiling = 120;
     let targetFloor = 19;
     var target = Math.floor(Math.random() * (targetCeiling-targetFloor)) + targetFloor;
-    $("#target").append("<strong>" + target + "</strong>");
+    $("#target").html("<strong>" + target + "</strong>");
 
-    var runningScore = 0;
     let scoreCeiling = 12;
     let scoreFloor = 2;
-    let score = Math.floor(Math.random() * (scoreCeiling - scoreFloor)) + scoreFloor;
+    let scoreRed = Math.floor(Math.random() * (scoreCeiling - scoreFloor)) + scoreFloor;
+    let scoreBlue = Math.floor(Math.random() * (scoreCeiling - scoreFloor)) + scoreFloor;
+    let scoreGreen = Math.floor(Math.random() * (scoreCeiling - scoreFloor)) + scoreFloor;
+    let scoreYellow = Math.floor(Math.random() * (scoreCeiling - scoreFloor)) + scoreFloor;
     // let ranNumRed = 1 //(Math.round(Math.random() * 43) + 2);
     // let ranNumBlue = 1 //(Math.round(Math.random() * 72) + 2);
     // let ranNumGreen = (Math.round(Math.random() * 14) + 2);
     // let ranNumYellow = (Math.round(Math.random() * 43) + 2); 
     var wins = 0;
     var losses = 0;
+    var runningScore = 0;
 
       
     
@@ -24,24 +27,24 @@ $("[data-id=1]").on("click", function(event){
     // console.log($(this));
     // console.log(this.getAttribute("data-id"));
     // console.log($(this).attr("data-id"));
-    runningScore += score;
+    runningScore += scoreRed;
     console.log(runningScore);
     $("#spanTotal").html("<strong>" + runningScore + "</strong>");
     
     if (runningScore === target) {
-        console.log("Winner!");
         wins++;
         $("#spanWins").html("<strong>" + wins + "</strong>");
+        alert("You are a winner!");
      }
     else if (runningScore > target) {
         losses++;
         $("#spanLosses").html("<strong>" + losses + "</strong>");
+        alert("You have lost the game!");
      };
 });
 
 $("[data-id=2]").on("click", function(event) {
-    console.log(score);
-    runningScore += score;
+    runningScore += scoreBlue;
     $("#spanTotal").html("<strong>" + runningScore + "</strong>");
 
     // runningScore = parseFloat(runningScore);
@@ -50,16 +53,17 @@ $("[data-id=2]").on("click", function(event) {
         console.log("Winner!");
         wins++;
         $("#spanWins").html("<strong>" + wins + "</strong>")
+        alert("You are a winner!");
      }
     else if (runningScore > target) {
         losses++;
         $("#spanLosses").html("<strong>" + losses + "</strong>");
+        alert("You have lost the game!");
      };
 });
 
 $("[data-id=3]").on("click", function() {
-    console.log(score);
-    runningScore += score;
+    runningScore += scoreGreen;
     $("#spanTotal").html("<strong>" + runningScore + "</strong>");
 
     // runningScore = parseFloat(runningScore);
@@ -68,33 +72,47 @@ $("[data-id=3]").on("click", function() {
         console.log("Winner!");
         wins++;
         $("#spanWins").html("<strong>" + wins + "</strong>");
+        alert("You are a winner!");
      }
     else if (runningScore > target) {
         losses++;
         $("#spanLosses").html("<strong>" + losses + "</strong>");
+        alert("You have lost the game!");
      };
 });
 
 $("[data-id=4]").on("click", function() {
-    console.log(score);
-    runningScore += score;
+    runningScore += scoreYellow;
     $("#spanTotal").html("<strong>" + runningScore + "</strong>");
 
     if (runningScore === target) {
         console.log("Winner!");
         wins++;
         $("#spanWins").html("<strong>" + wins + "</strong>");
+        alert("You are a winner!");
      }
     else if (runningScore > target) {
         losses++;
         $("#spanLosses").html("<strong>" + losses + "</strong>");
+        alert("You have lost the game!");
      };
 });
 
 
 
-// $("#newGame")
+    function resetGame() {
+        target = Math.floor(Math.random() * (targetCeiling-targetFloor)) + targetFloor;
+        scoreRed = Math.floor(Math.random() * (scoreCeiling - scoreFloor)) + scoreFloor;
+        scoreBlue = Math.floor(Math.random() * (scoreCeiling - scoreFloor)) + scoreFloor;
+        scoreGreen = Math.floor(Math.random() * (scoreCeiling - scoreFloor)) + scoreFloor;
+        scoreYellow = Math.floor(Math.random() * (scoreCeiling - scoreFloor)) + scoreFloor;
+        runningScore = 0;
+        $("#spanTotal").html("<strong>" + runningScore + "</strong>");
+    };
 
+$("#reset").on("click", function(){
+    resetGame();
+});
 
 });
 
