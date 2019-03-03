@@ -10,27 +10,83 @@
     src="https://code.jquery.com/jquery-3.3.1.min.js"
     integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
     crossorigin="anonymous"></script>
+<<<<<<< HEAD
+    <script src="assets/game.js"></script>
+=======
     <script src="game.js"></script>
+>>>>>>> e36c773c2beb1548f3f5c284eca956551372cd93
 </head>
-<body>
+<body style="background-image: url('assets/crystalGameBackground.jpg')">
     <div class="container">
         <!-- row containing instructions -->
+<<<<<<< HEAD
+        <div class="row" style="background: none">
+            <div class="col-12 jumbotron" style="background: none">
+                <div class="jumbotron bg-light" style="background-image: url('assets/crystalInstructions.jpg')" style="border: solid" style="border-color: white">
+                    <span style="color: yellow">
+                    <h1 style="color: whitesmoke">Crystal Math Guessing Game</h1>
+                    <p>Welcome!  Here, if you want to succeed, you will need both luck and the power of mathematics.  May the crystals be forever with you!</p>
+                    <p>The game has automatically begun.  To play, click a crystal, as many crystals as you like, as many times as you like.
+                        Each crystal has chosen a numerical value that it will add to your Total when you click it.
+                        But beware!  You only become the champion of the game if you match your Total points value to the Target value.
+                        Your number of wins and losses will be recorded for posterity, so play wisely.
+                    </p>
+                    </span>
+=======
         <div class="row">
             <div class="col-12 jumbotron">
                 <div class="jumbotron bg-light">
                     Instructions
                     
+>>>>>>> e36c773c2beb1548f3f5c284eca956551372cd93
                 </div>
             </div>
         </div>
             <!-- reset button row -->
         <div class="row">
+<<<<<<< HEAD
+            <div class="col-12" style="background: none">
+=======
             <div class="col-12">
+>>>>>>> e36c773c2beb1548f3f5c284eca956551372cd93
                 <div class="btn btn-light btn-block bg-info" id="reset">Reset the Game</div>
             </div>
         </div>
             <!-- row for target and total -->
             <div class="row">
+<<<<<<< HEAD
+                <div class="col-6" id="target" style="color: whitesmoke">Target: </div>    
+                <div class="col-6" id="total" style="color: whitesmoke">Total: <span id="spanTotal"></span></div>
+            </div>
+            <!-- row containing my crystals; note: data-id is an attribute -->
+            <div class="row" style="background: none">
+                <div class="col-3" style="background: none">
+                    <div class="btn btn-light btn-block" data-id=1 data-value=5 style="background-image: url('assets/redCrystal.jpg')"> 
+                        <span style="background-color: red">
+                        Red Crystal
+                        </span>
+                    </div>
+                </div>
+                <div class="col-3" style="background: none">
+                    <div class="btn btn-light btn-block" data-id=2 data-value=5 style="background-image: url('assets/blueCrystal.jpg')">
+                        <span style="background-color: blue" style="color: rgb(39, 38, 38)">
+                        Blue Crystal
+                        </span>
+                    </div>
+                </div>
+                <div class="col-3" style="background: none">
+                    <div class="btn btn-light btn-block" data-id=3 data-value=5 style="background-image: url('assets/greenCrystal.jpg')">
+                        <span style="background-color: green">
+                        Green Crystal
+                         </span>
+                     </div>
+                </div>
+                <div class="col-3" style="background: none">
+                     <div class="btn btn-light btn-block" data-id=4 data-value=5 style="background-image: url('assets/yellowCrystal.jpeg')">
+                        <span style="background-color: yellow">
+                        Yellow Crystal
+                        </span>
+=======
                 <div class="col-6" id="target">Target: </div>    
                 <div class="col-6" id="total">Total: <span id="spanTotal"></span></div>
             </div>
@@ -54,13 +110,19 @@
                 <div class="col-3 bg-warning">
                      <div class="btn btn-light btn-block" data-id=4 data-value=5>
                         Yellow
+>>>>>>> e36c773c2beb1548f3f5c284eca956551372cd93
                     </div>
                 </div>
             </div>
             <!-- row for wins and losses -->
             <div class="row">
+<<<<<<< HEAD
+                    <div class="col-6" id="wins" style="color: whitesmoke">Wins: <span id="spanWins"></span></div>    
+                    <div class="col-6" id="losses" style="color: whitesmoke">Losses: <span id="spanLosses"></span></div>
+=======
                     <div class="col-6" id="wins">Wins: <span id="spanWins"></span></div>    
                     <div class="col-6" id="losses">Losses: <span id="spanLosses"></span></div>
+>>>>>>> e36c773c2beb1548f3f5c284eca956551372cd93
             </div>
     
     </div>
